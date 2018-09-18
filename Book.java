@@ -81,7 +81,17 @@ class Book
     // Mutator method for a book's refNumber
     public void setRefNumber(String ref)
     {
-        refNumber = ref;
+        if (ref.length() < 3)
+        {
+            System.out.println(
+                "Error: reference number must be\n" +
+                "at least 3 characters long.\n" +
+                "No changes have been made.\n");
+        }
+        else
+        {
+            refNumber = ref;
+        }
     }
     
     // Accessor method for a book's refNumber
