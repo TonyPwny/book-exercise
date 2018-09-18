@@ -55,4 +55,13 @@ class Book
     {
         System.out.println(title);
     }
+    
+    // Method to print a book's full details to terminal
+    public void printDetails()
+    {
+        System.out.println("\n" +
+            "Title:\t" + title + "\n" +
+            "Author:\t" + author + "\n" +
+            "Pages:\t"   + pages + "\n");
+    }
 }
