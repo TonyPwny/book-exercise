@@ -35,4 +35,16 @@ class Book
     {
         return title;
     }
+    
+    // Method to print a book's author to terminal
+    public void printAuthor()
+    {
+        System.out.println(author);
+    }
+    
+    // Method to print a book's title to terminal
+    public void printTitle()
+    {
+        System.out.println(title);
+    }
 }
