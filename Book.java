@@ -13,17 +13,21 @@ class Book
     private String title;
     private int pages;
     private String refNumber;
+    private int borrowed;
+    private boolean courseText;
 
     /**
      * Set the author and title fields when this object
      * is constructed.
      */
-    public Book(String bookAuthor, String bookTitle, int bookPages)
+    public Book(String bookAuthor, String bookTitle, int bookPages, boolean inCourse)
     {
         author = bookAuthor;
         title = bookTitle;
         pages = bookPages;
         refNumber = "";
+        borrowed = 0;
+        courseText = inCourse;
     }
 
     // Add the methods here ...
@@ -76,6 +80,9 @@ class Book
             System.out.print(
                 "Reference Number:\t" + refNumber + "\n");
         }
+        
+        System.out.print(
+            "This book has been checked out " + borrowed + " times.\n");
     }
     
     // Mutator method for a book's refNumber
@@ -98,5 +105,23 @@ class Book
     public String getRefNumber()
     {
         return refNumber;
+    }
+    
+    // Mutator method for borrow field
+    public void borrow()
+    {
+        borrowed = borrowed + 1;
+    }
+    
+    // Accessor method for a book's borrowed amount
+    public int getBorrowed()
+    {
+        return borrowed;
+    }
+    
+    // Accessor method to see if a book is being used in a course
+    public boolean isCourseText()
+    {
+        return courseText;
     }
 }
