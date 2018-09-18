@@ -61,10 +61,21 @@ class Book
     // Method to print a book's full details to terminal
     public void printDetails()
     {
-        System.out.println("\n" +
-            "Title:\t" + title + "\n" +
-            "Author:\t" + author + "\n" +
-            "Pages:\t"   + pages + "\n");
+        System.out.print(
+            "Title:\t\t\t" + title + "\n" +
+            "Author:\t\t\t" + author + "\n" +
+            "Pages:\t\t\t"   + pages + "\n");
+        
+        if (refNumber.length() == 0)
+        {
+            System.out.print(
+                "Reference Number:\tZZZ" + "\n");
+        }
+        else
+        {
+            System.out.print(
+                "Reference Number:\t" + refNumber + "\n");
+        }
     }
     
     // Mutator method for a book's refNumber
